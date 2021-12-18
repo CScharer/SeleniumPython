@@ -8,19 +8,20 @@ from pages.page_example_2 import PageExample2
 logger = getLogger(__name__)
 
 
+# noinspection PyPep8Naming
 class PagesAUT(PageBase):
     @property
     def Example1(self):
-        return PageExample1(self.__driver)
+        return PageExample1(self.driver)
 
     @property
     def Example2(self):
-        return PageExample2(self.__driver)
+        return PageExample2(self.driver)
 
     def __init__(self, driver: any, url_base: str):
         super().__init__(driver)
-        self.__driver = driver
-        self.__base_url = url_base
+        self.driver = driver
+        self.url_base = url_base
 
     @staticmethod
     def sleep(seconds):
