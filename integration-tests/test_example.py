@@ -17,5 +17,6 @@ class TestExample:
     def test_example2(self):
         example: str = "Example2"
         print(f"{example}")
-        assert True, f"Testing Assertion"
         aut = PagesAUT("", "")
+        aut.sleep(3)
+        assert True, f"Testing Assertion"

@@ -1,3 +1,4 @@
+import time
 from logging import getLogger
 
 from pages.page_base_v1 import PageBase
@@ -20,3 +21,8 @@ class PagesAUT(PageBase):
         super().__init__(driver)
         self.__driver = driver
         self.__base_url = url_base
+
+    @staticmethod
+    def sleep(seconds):
+        print(f"Sleeping for {seconds} second(s)")
+        time.sleep(seconds)
